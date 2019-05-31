@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div><strong>球団名</strong></div>
+	<div th:text="${team.TeamName}"></div>
+	<div><strong>本拠地</strong></div>
+	<div th:text="${team.headquarters}"></div>
+	<div ><strong>発足</strong></div>
+	<div th:text="${team.inauguration}"></div>
+	<div><strong>歴史</strong></div>
+	<pre th:text="${#strings.replace(team.history, '\r', '<br>')}"></pre>
+	<button>戻る</button>
+</body>
+</html>
